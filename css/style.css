@@ -112,7 +112,6 @@ header{
 
 /*FOTO Gallery*/
 
-
 .foto-gallery{
 	display: none;	
 }
@@ -163,23 +162,28 @@ header{
 	background-color: transparent;
 	font-size: 2em;
 }
-
-
 /*FOTO Pages*/
 
 
 .foto-page{
-	z-index: 10;
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	-o-column-count: 4;
-	column-count: 4;
-	text-align: center;
-	column-gap: 0.2em;
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: center;
+}
+.foto-page-item{
+	width: 24%;
+	height: 350px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	position: relative;
 }
 .foto-page img{
-	display: inline-block;
-	max-width: 100%;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .foto-page img:hover{
 	box-shadow: 0 0 1em gray;
@@ -190,7 +194,7 @@ footer{
 	width: 100%;
 	padding: 0 10%;
 	background-color: #fff;
-	bottom: 0;
+	padding-bottom: 100px;
 }
 footer a{
 	color: #000;
@@ -214,8 +218,6 @@ footer a{
 .fab, .fas{
 	text-rendering: optimizeLegibility; /*safary*/
 }
-
-
 
 
 @media  screen and (max-width: 1200px) {
