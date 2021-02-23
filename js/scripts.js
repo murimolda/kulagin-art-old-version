@@ -4,7 +4,6 @@ var submenu = document.getElementById('submenu');
 var mainBlock = document.getElementById('main-block');
 var nav = document.getElementsByClassName("menu-item");
 var sandwich = document.getElementById('hmt');
-var headerId = document.getElementById('header');
 var preloader = document.getElementById('page-preloader');
 
 /*Прелоадер*/
@@ -38,21 +37,23 @@ sandwich.onclick = function(){
 
 // ГАЛЕРЕЯ
 var gallery = document.getElementById('foto-gallery');
-var fotoPage = document.getElementById('foto-page');
-var fotoGallery= fotoPage.getElementsByTagName('img');
+var fotoPage = document.getElementsByClassName('foto-page');
 var galleryClose = document.getElementById('foto-gallery-close');
 var img = document.getElementById('foto');
 var rightArrowButton = document.getElementById('foto-arrow-right');
 var leftArrowButton = document.getElementById('foto-arrow-left');
 
 /*Открываем галерею нажатием на фотографию*/
-for (var i = 0; i < fotoGallery.length; i++){
-  fotoGallery[i].addEventListener('click', function(e){
-    var elem = e.target;
-    img.src = elem.src;
-    gallery.classList.add('foto-gallery-open');
-    history.pushState(null, null, '#foto');
-  });
+for (var i = 0; i < fotoPage.length; i++){
+  var fotoGallery = fotoPage[i].getElementsByTagName('img');
+  console.log(fotoGallery);
+  for (var i = 0; i < fotoGallery.length; i++){
+    fotoGallery[i].addEventListener('click', function(e){
+      var elem = e.target;
+      img.src = elem.src;
+      gallery.classList.add('foto-gallery-open');
+    });
+  };
 };
 
 /*Закрываем галерею нажатием креста*/
@@ -62,7 +63,6 @@ function galleryСross(){
 };
 
 galleryClose.addEventListener('click', function(){
-  history.pushState(null, null, ' ');
   galleryСross();
 })
 ;
