@@ -12,7 +12,11 @@ body{
 	position: relative;
 	font-size: 20px;
 }
-
+@media  screen and (max-width: 1200px) {
+	body{
+		font-size: 16px;
+	}
+}
 .page-preloader {
     position: fixed;
     left: 0;
@@ -22,7 +26,6 @@ body{
     background: #fff;
     z-index: 100500;
 }
-
 .page-preloader .spinner {
     width: 6em;
     height: 6em;
@@ -32,7 +35,11 @@ body{
 	transform: translate(-50%, -50%);
     background: url('http://kulagin-art.com/wp-content/uploads/2019/11/spinner.gif') no-repeat 50% 50%;
 }
-
+@media screen and (max-width: 600px){
+	.page-preloader{
+		display: none;
+	}
+}
 header{
 	position: fixed;
 	width: 100%;
@@ -66,6 +73,14 @@ header{
 	text-decoration: none;
 	color: #000;
 }
+@media screen and (max-width: 800px) {
+	.menu {
+		width: 65%;
+	}
+	.menu ul li{
+		font-size: 12px;
+	}
+}
 .sandwich{
 	display: none;
 }
@@ -82,11 +97,15 @@ header{
 .logo img{
 	width: 100%;
 }
-
+@media screen and (max-width: 800px) {
+	.logo {
+		width: 35%;
+	}
+}
 .content-block{
 	width: 80%;
 	margin: 0 auto;
-	padding: 150px 0;
+	padding-top: 150px;
 }
 .home-page{
 	display: -webkit-flex;
@@ -109,11 +128,19 @@ header{
 .home-page-text p{
 	line-height: 1.5;
 }
+@media screen and (max-width: 800px) {
+	.home-page-img {
+		width: 35%;
+	}
+	.home-page-text {
+		width: 65%;
+	}
+}
 
 /*FOTO Gallery*/
 
 .foto-gallery{
-	display: none;	
+	display: none;
 }
 .foto-gallery-open{
 	display: -webkit-flex;
@@ -162,14 +189,48 @@ header{
 	background-color: transparent;
 	font-size: 2em;
 }
+@media screen and (max-width: 800px) {
+	.foto-gallery-open{
+		width: 100%;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		background-color: #000;
+	}
+	.foto-gallery-close{
+		right: 1%;
+	}
+	.foto-gallery-close button{
+		color: #fff;
+	}
+	.foto-gallery-arrow{
+		display: none;
+	}
+	.foto-gallery-open-img{
+		width: 100%;
+		padding-top: 30px;
+	}
+	.foto-gallery-open-img img{
+		max-height: 95vh;
+		max-width: 100vw;
+		padding-bottom: 0;
+		padding-top: 1em;
+	}
+}
+
 /*FOTO Pages*/
-
-
 .foto-page{
 	display: flex;
 	flex-direction: row;
 	flex-flow: wrap;
 	justify-content: center;
+}
+.foto-page h3{
+	width: 100%;
+	font-size: 40px;
+	font-weight: normal;
+	text-align: center;
+	margin: 40px 0;
 }
 .foto-page-item{
 	width: 24%;
@@ -188,13 +249,21 @@ header{
 .foto-page img:hover{
 	box-shadow: 0 0 1em gray;
 }
-
+@media screen and (max-width: 800px) {
+	.foto-page{
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		-o-column-count: 3;
+		column-count: 3;
+	}
+}
 footer{
 	height: 40px;
 	width: 100%;
 	padding: 0 10%;
 	background-color: #fff;
 	padding-bottom: 100px;
+	margin-top: 60px;
 }
 footer a{
 	color: #000;
@@ -218,106 +287,47 @@ footer a{
 .fab, .fas{
 	text-rendering: optimizeLegibility; /*safary*/
 }
-
-
-@media  screen and (max-width: 1200px) {
-	body{
-		font-size: 16px;
-	}
-}
-
 @media screen and (max-width: 800px) {
-	.menu {
-	    width: 65%;
-	}
-	.menu ul li{
-		font-size: 12px;
-		
-	}
-	.logo {
-	    width: 35%;
-	}
-	.home-page-img {
-	    width: 35%;
-	}
-	.home-page-text {
-	    width: 65%;
-	}
-	.foto-page{
-		-webkit-column-count: 3;
-		-moz-column-count: 3;
-		-o-column-count: 3;
-		column-count: 3;
-	}
 	.contacts {
-	    width: 35%;
-	}
-	.foto-gallery-open{
-		width: 100%;
-		height: 100vh;
-	    top: 0;
-	    left: 0;
-		background-color: #000;
-	}
-	.foto-gallery-close{
-		right: 1%;
-	}
-	.foto-gallery-close button{
-		color: #fff;
-	}
-	.foto-gallery-arrow{
-		display: none;
-	}
-	.foto-gallery-open-img{
-	    width: 100%;
-    	padding-top: 30px;
-	}
-	.foto-gallery-open-img img{
-	    max-height: 95vh;
-	    max-width: 100vw;
-	    padding-bottom: 0;
-	    padding-top: 1em;
+		width: 35%;
 	}
 }
 
 @media screen and (max-width: 600px){
-	.page-preloader{
-		display: none;
-	}
 	header{
 		-ms-align-items: flex-start;
 		align-items: flex-start;
 		padding-top: 20px;
-	    height: 50px;
+		height: 50px;
 	}
 	.content-block{
-	    padding: 70px 0;
+		padding: 70px 0;
 	}
 	.menu {
-	    display: none;
+		display: none;
 		width: 80%;
-	    position: absolute;
-	    z-index: 1000;
-	    top: 100px;
-	    left: 10%;
-	    padding-left: 0;
+		position: absolute;
+		z-index: 1000;
+		top: 100px;
+		left: 10%;
+		padding-left: 0;
 	}
 	.menu ul li {
-	    padding-right: 0;
-	    display: block;
-	    text-align: center;
-	    font-size: 30px;
-	    line-height: 1.7;
+		padding-right: 0;
+		display: block;
+		text-align: center;
+		font-size: 30px;
+		line-height: 1.7;
 	}	
 	.sandwich{
-	    display: block;
-	    width: 10%;
+		display: block;
+		width: 10%;
 	}
 	.btn-menu{
 		background: #fff;
 		position: fixed;
 		top: 20px;
-    	right: 10%;
+		right: 10%;
 		cursor: pointer;
 		z-index: 1000;
 		transform: translateZ(0);
@@ -352,27 +362,21 @@ footer a{
 		top: -3px;
 	}
 	.logo {
-	    width: 80%;
+		width: 80%;
 	}
 	.home-page {
-	    display: block;
+		display: block;
 	}
 	.home-page-img {
 		width: 100%;
 	}
 	.home-page-text {
-	    width: 100%;
-	    padding-left: 0;
-	    padding-top: 20px;
-	}
-	.foto-page{
-		-webkit-column-count: 1;
-		-moz-column-count: 1;
-		-o-column-count: 1;
-		column-count: 1;
+		width: 100%;
+		padding-left: 0;
+		padding-top: 20px;
 	}
 	.contacts {
-	    width: 100%;
+		width: 100%;
 	}
 }
 
