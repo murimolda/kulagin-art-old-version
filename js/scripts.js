@@ -46,7 +46,6 @@ var leftArrowButton = document.getElementById('foto-arrow-left');
 /*Открываем галерею нажатием на фотографию*/
 for (var i = 0; i < fotoPage.length; i++){
   var fotoGallery = fotoPage[i].getElementsByTagName('img');
-  console.log(fotoGallery);
   for (var i = 0; i < fotoGallery.length; i++){
     fotoGallery[i].addEventListener('click', function(e){
       var elem = e.target;
