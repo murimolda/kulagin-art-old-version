@@ -33,7 +33,7 @@ body{
     left: 50%;
     top: 50%;
 	transform: translate(-50%, -50%);
-    background: url('http://kulagin-art.com/wp-content/uploads/2019/11/spinner.gif') no-repeat 50% 50%;
+    background: url('img/spinner.gif') no-repeat 50% 50%;
 }
 @media screen and (max-width: 600px){
 	.page-preloader{
@@ -121,7 +121,7 @@ header{
 }
 @media screen and (max-width: 600px){
 	.content-block{
-		padding: 70px 0;
+		padding-top: 70px;
 	}
 	.btn-menu{
 		background: #fff;
@@ -135,31 +135,14 @@ header{
 	}
 	.btn-menu span{
 		display: block;
-		height: 1px;
-		width: 28px;
-		background-color: #000;
-		margin: 6px 0 0;
-		position: relative;
+		width: 24px;
+		height: 24px;
+		background-image: url(../img/icons/menu-24px.svg);
+		background-size: contain;
+
 	}
-	.btn-menu span:first-child{
-		margin-top: 0;
-	}
-	.hidden-menu-ticker:checked ~ .btn-menu{
-		right: 10%;
-	}
-	.hidden-menu-ticker:checked ~ .hidden-menu{
-		right: 0;
-	}
-	.hidden-menu-ticker:checked ~ .btn-menu span:first-child{
-		transform: rotate(45deg);
-		top: 10px;
-	}
-	.hidden-menu-ticker:checked ~ .btn-menu span:nth-child(2){
-		opacity: 0;
-	}
-	.hidden-menu-ticker:checked ~ .btn-menu span:nth-child(3){
-		transform: rotate(-45deg);
-		top: -3px;
+	.hidden-menu-ticker:checked ~ .btn-menu span{
+		background-image: url(../img/icons/close-24px.svg);
 	}
 }
 .logo{
@@ -174,12 +157,7 @@ header{
 }
 @media screen and (max-width: 800px) {
 	.logo {
-		width: 35%;
-	}
-}
-@media screen and (max-width: 600px){
-	.logo {
-		width: 80%;
+		width: 40%;
 	}
 }
 .contacts{
@@ -204,12 +182,7 @@ header{
 }
 @media screen and (max-width: 800px) {
 	.contacts {
-		width: 35%;
-	}
-}
-@media screen and (max-width: 600px){
-	.contacts {
-		width: 100%;
+		width: 40%;
 	}
 }
 .content-block{
@@ -376,13 +349,6 @@ header{
 .foto-page img:hover{
 	box-shadow: 0 0 1em gray;
 }
-@media screen and (max-width: 800px) {
-	.foto-page{
-		-webkit-column-count: 3;
-		-moz-column-count: 3; 
-		-o-column-count: 3;
-		column-count: 3;
-	}
-}
+
 
 
