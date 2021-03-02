@@ -341,7 +341,7 @@ header > .content-block{
 	margin: 40px 0;
 }
 .foto-page-item{
-	width: 30%;
+	width: 25%;
 	height: 400px;
 	margin-right: 10px;
 	margin-bottom: 10px;
@@ -350,7 +350,11 @@ header > .content-block{
 }
 @media screen and (max-width: 1024px) {
 	.foto-page-item{
-		width: 50%;
+		width: 30%;
+	}
+@media screen and (max-width: 600px) {
+	.foto-page-item{
+		width: 100%;
 	}
 }
 .foto-page img{
