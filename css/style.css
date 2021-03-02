@@ -60,6 +60,11 @@ header > .content-block{
 		padding: 20px 0;
 	}
 }
+@media screen and (max-width: 600px){
+	header{
+		height: 120px;
+	}
+}
 .menu{
 	width: 50%;
 	padding-left: 30px;
@@ -113,18 +118,13 @@ header > .content-block{
 	}
 	.btn-menu{
 		background: #fff;
-		position: fixed;
-		top: 20px;
-		right: 10%;
 		cursor: pointer;
-		z-index: 1000;
-		transform: translateZ(0);
-		backface-visibility: hidden;
 	}
 	.btn-menu span{
 		display: block;
 		width: 24px;
 		height: 24px;
+		margin-left: auto;
 		background-image: url(../img/icons/menu-24px.svg);
 		background-size: contain;
 
@@ -162,15 +162,8 @@ header > .content-block{
 	}
 }
 .contacts{
-	display: -webkit-flex;
-	display: -webkit-box; /*safary*/
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
-	-webkit-box-pack: justify; /*safary*/
-	-webkit-justify-content: space-around;
-	justify-content: space-around;
+	justify-content: space-between;
 	width: 25%;
 }
 .contacts a{
@@ -191,7 +184,8 @@ header > .content-block{
 @media screen and (max-width: 600px) {
 	.contacts {
 		width: 75%;
-		padding-left: 30px;
+		padding-left: 0;
+		margin-right: 5%;
 	}
 }
 
@@ -352,6 +346,7 @@ header > .content-block{
 	.foto-page-item{
 		width: 30%;
 	}
+}
 @media screen and (max-width: 600px) {
 	.foto-page-item{
 		width: 100%;
