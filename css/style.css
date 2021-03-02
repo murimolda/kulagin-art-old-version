@@ -215,11 +215,11 @@ header{
 .content-block{
 	width: 80%;
 	margin: 0 auto;
-	padding-top: 150px;
+	padding-top: 100px;
 }
 @media screen and (max-width: 600px){
 	.content-block{
-		padding: 70px 0;
+		padding-top: 70px;
 	}
 }
 .home-page{
@@ -379,7 +379,7 @@ header{
 @media screen and (max-width: 800px) {
 	.foto-page{
 		-webkit-column-count: 3;
-		-moz-column-count: 3;
+		-moz-column-count: 3; 
 		-o-column-count: 3;
 		column-count: 3;
 	}
