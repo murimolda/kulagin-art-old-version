@@ -133,6 +133,12 @@ header > .content-block{
 		background-image: url(../img/icons/close-24px.svg);
 	}
 }
+
+@media (prefers-color-scheme: dark){
+	.btn-menu span{
+		background-image: url(../img/icons/menu-white.svg);
+	}
+}
 .logo{
 	display: block;
 	width: 25%;
@@ -365,6 +371,9 @@ header > .content-block{
 /*темная тема*/
 @media (prefers-dark-interface){
 	:link, :link * {
+		color: #eeeeee !important;
+	}
+	a * {
 		color: #eeeeee !important;
 	}
 }
