@@ -51,14 +51,13 @@ header > .content-block{
 	padding-top: 30px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 @media screen and (max-width: 900px){
-	header{
-		height: 70px;
-	}
 	header > .content-block{
 		align-items: flex-start;
-		padding-top: 20px;
+		padding: 20px 0;
 	}
 }
 .menu{
@@ -156,6 +155,12 @@ header > .content-block{
 		width: 50%;
 	}
 }
+@media screen and (max-width: 600px) {
+	.logo {
+		width: 100%;
+		padding-bottom: 20px;
+	}
+}
 .contacts{
 	display: -webkit-flex;
 	display: -webkit-box; /*safary*/
@@ -180,6 +185,12 @@ header > .content-block{
 @media screen and (max-width: 900px) {
 	.contacts {
 		width: 40%;
+		padding-left: 30px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.contacts {
+		width: 75%;
 		padding-left: 30px;
 	}
 }
@@ -275,9 +286,6 @@ header > .content-block{
 }
 .foto-gallery-arrow{
 	width: 10%;
-	-webkit-align-self: center;
-	-ms-align-self: center;
-	-ms-flex-item-align: center;
 	align-self: center;
 }
 .foto-gallery-arrow-right{
