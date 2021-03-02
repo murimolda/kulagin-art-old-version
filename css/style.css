@@ -12,7 +12,7 @@ body{
 	position: relative;
 	font-size: 20px;
 }
-@media  screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
 	body{
 		font-size: 16px;
 	}
@@ -43,30 +43,26 @@ body{
 header{
 	position: fixed;
 	width: 100%;
-	padding: 0 10%;
-	height: 100px;
+	height: 90px;
 	z-index: 100;
 	background-color: #fff;
-	display: -webkit-flex;
-	display: -webkit-box; /*safary*/
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
+}
+header > .content-block{
+	padding-top: 30px;
 	display: flex;
-	-webkit-box-align: center; /*safary*/
-	-ms-align-items: center;
 	align-items: center;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
 	header{
-		-ms-align-items: flex-start;
+		height: 70px;
+	}
+	header > .content-block{
 		align-items: flex-start;
 		padding-top: 20px;
-		height: 50px;
 	}
 }
 .menu{
-	width: 75%;
+	width: 50%;
 	padding-left: 30px;
 }
 .menu ul{
@@ -81,21 +77,13 @@ header{
 	text-decoration: none;
 	color: #000;
 }
-@media screen and (max-width: 800px) {
-	.menu {
-		width: 65%;
-	}
-	.menu ul li{
-		font-size: 12px;
-	}
-}
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px) {
 	.menu {
 		display: none;
 		width: 80%;
 		position: absolute;
 		z-index: 1000;
-		top: 100px;
+		top: 120px;
 		left: 10%;
 		padding-left: 0;
 	}
@@ -110,16 +98,17 @@ header{
 .sandwich{
 	display: none;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
 	.sandwich{
 		display: block;
 		width: 10%;
+		order: 1;
 	}
 }
 .hidden-menu-ticker {
 	display: none;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
 	.content-block{
 		padding-top: 70px;
 	}
@@ -150,14 +139,21 @@ header{
 	width: 25%;
 }
 .logo a{
+	display: block;
 	text-decoration: none;
-}
-.logo img{
 	width: 100%;
+	height: 24px;
 }
-@media screen and (max-width: 800px) {
+.logo-image{
+	display: block;
+	height: 24px;
+	width: 100%;
+	background: url(../img/site_logo-1.svg) no-repeat center;
+	background-size: cover;
+}
+@media screen and (max-width: 900px) {
 	.logo {
-		width: 40%;
+		width: 50%;
 	}
 }
 .contacts{
@@ -174,21 +170,25 @@ header{
 }
 .contacts a{
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 24px;
+	line-height: 0;
 	color: #000;
 }
 .fab, .fas{
 	text-rendering: optimizeLegibility; /*safary*/
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 	.contacts {
 		width: 40%;
+		padding-left: 30px;
 	}
 }
+
+
 .content-block{
 	width: 80%;
 	margin: 0 auto;
-	padding-top: 100px;
+	padding-top: 120px;
 }
 @media screen and (max-width: 600px){
 	.content-block{
@@ -251,7 +251,7 @@ header{
 	display: flex;
 	width: 80%;
 	position: fixed;
-	top: 100px;
+	top: 90px;
 	z-index: 100;
 	background-color: rgba(255, 255, 255, 0.8);
 	height: 100%;
@@ -333,12 +333,17 @@ header{
 	margin: 40px 0;
 }
 .foto-page-item{
-	width: 24%;
-	height: 350px;
+	width: 30%;
+	height: 400px;
 	margin-right: 10px;
 	margin-bottom: 10px;
 	overflow: hidden;
 	position: relative;
+}
+@media screen and (max-width: 1024px) {
+	.foto-page-item{
+		width: 50%;
+	}
 }
 .foto-page img{
 	position: absolute;
@@ -350,5 +355,10 @@ header{
 	box-shadow: 0 0 1em gray;
 }
 
-
+/*темная тема*/
+@media (prefers-dark-interface){
+	:link, :link * {
+		color: #eeeeee !important;
+	}
+}
 
