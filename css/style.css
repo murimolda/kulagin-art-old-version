@@ -194,8 +194,12 @@ header > .content-block{
 		margin-right: 5%;
 	}
 }
-
-
+/*темная тема*/
+@media (prefers-color-scheme: dark){
+	:link, :link *{
+		color: #eeeeee !important;
+	}
+}
 .content-block{
 	width: 80%;
 	margin: 0 auto;
@@ -254,11 +258,6 @@ header > .content-block{
 	display: none;
 }
 .foto-gallery-open{
-	display: -webkit-flex;
-	display: -webkit-box; /*safary*/
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
 	display: flex;
 	width: 80%;
 	position: fixed;
@@ -266,15 +265,15 @@ header > .content-block{
 	z-index: 100;
 	background-color: rgba(255, 255, 255, 0.8);
 	height: 100%;
-	-webkit-align-items: center; /*safary*/
-	-ms-align-items: center;
-	align-items: center;
 }
 .foto-gallery-open-img{
-	text-align: center;
 	width: 80%;
 }
 .foto-gallery-open-img img{
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	transform: translate(-50%);
 	max-height: 89vh;
 	max-width: 100%;
 	padding-bottom: 100px;
@@ -284,19 +283,25 @@ header > .content-block{
 	top: 0;
 	right: 0;
 }
-.foto-gallery-arrow{
-	width: 10%;
-	align-self: center;
-}
-.foto-gallery-arrow-right{
-	text-align: right;
-}
 .foto-gallery button{
 	border: none;
 	outline: transparent;
 	background-color: transparent;
-	font-size: 2em;
+	width: 100%;
+	height: 100%;
+	text-align: left;
 }
+.foto-gallery-arrow{
+	width: 50%;
+	height: 100%;
+}
+.foto-gallery-arrow button img{
+	width: 20%;
+}
+.foto-gallery-arrow-right button img{
+	margin-left: 80%;
+}
+
 @media screen and (max-width: 800px) {
 	.foto-gallery-open{
 		width: 100%;
@@ -366,15 +371,5 @@ header > .content-block{
 }
 .foto-page img:hover{
 	box-shadow: 0 0 1em gray;
-}
-
-/*темная тема*/
-@media (prefers-dark-interface){
-	:link, :link * {
-		color: #eeeeee !important;
-	}
-	a * {
-		color: #eeeeee !important;
-	}
 }
 
