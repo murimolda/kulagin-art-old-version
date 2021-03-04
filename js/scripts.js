@@ -1,10 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-var submenu = document.getElementById('submenu');
-var mainBlock = document.getElementById('main-block');
-var nav = document.getElementsByClassName("menu-item");
-var sandwich = document.getElementById('hmt');
-var preloader = document.getElementById('page-preloader');
+// СТРЕЛКА НАВЕРХ
+let goTopBtn = document.getElementById('arrow_top');
+
+function backToTop() {
+    if (window.pageYOffset > 0) {
+        window.scrollBy(0, -2000);
+        setTimeout(backToTop, 0);
+    }
+};
+
+goTopBtn.onclick = function() {
+    backToTop();
+};
+
+
+let submenu = document.getElementById('submenu');
+let mainBlock = document.getElementById('main-block');
+let nav = document.getElementsByClassName("menu-item");
+let sandwich = document.getElementById('hmt');
+let preloader = document.getElementById('page-preloader');
 
 /*Прелоадер*/
 window.onload = function(){
@@ -36,12 +51,12 @@ sandwich.onclick = function(){
 };
 
 // ГАЛЕРЕЯ
-var gallery = document.getElementById('foto-gallery');
-var fotoPage = document.getElementsByClassName('foto-page');
-var galleryClose = document.getElementById('foto-gallery-close');
-var img = document.getElementById('foto');
-var rightArrowButton = document.getElementById('foto-arrow-right');
-var leftArrowButton = document.getElementById('foto-arrow-left');
+let gallery = document.getElementById('foto-gallery');
+let fotoPage = document.getElementsByClassName('foto-page');
+let galleryClose = document.getElementById('foto-gallery-close');
+let img = document.getElementById('foto');
+let rightArrowButton = document.getElementById('foto-arrow-right');
+let leftArrowButton = document.getElementById('foto-arrow-left');
 
 /*Открываем галерею нажатием на фотографию*/
 for (var i = 0; i < fotoPage.length; i++){
@@ -118,8 +133,8 @@ function checkKey(e){
 img.addEventListener('touchstart', handleTouchStart, false);  
 img.addEventListener('touchmove', handleTouchMove, false);
 
-var xDown = null;                                                        
-var yDown = null;                                                        
+let xDown = null;                                                        
+let yDown = null;                                                        
 
 function handleTouchStart(evt) {                                         
     xDown = evt.touches[0].clientX;                                      
