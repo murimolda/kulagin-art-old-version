@@ -17,14 +17,14 @@ body{
 		font-size: 16px;
 	}
 }
-.arrow_top{
+.arrow-top{
 	position: fixed;
 	bottom: 25px;
 	right: 25px;
 	width: 50px;
 	height: 50px;
 }
-.arrow_top button{
+.arrow-top button{
 	border: none;
 	background: url(../img/icons/keyboard_arrow_up-24px.svg) no-repeat;
 	background-size: contain;
